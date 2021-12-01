@@ -1,4 +1,4 @@
-# Angular
+# BlogPessoal_Angular
 This project was generated with Angular CLI version 12.2.11.
 
 # Development server
