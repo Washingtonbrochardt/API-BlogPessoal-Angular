@@ -1,0 +1,24 @@
+.icones {
+  font-size: 2rem;
+}
+
+  .icones a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .fa{
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+}
+
+.fa-facebook-official:hover{
+    color: #3b5998;
+}
+.fa-instagram:hover{
+    color: #C13584;
+}
+.fa-linkedin-square:hover{
+    color: #0072b1;
+}
