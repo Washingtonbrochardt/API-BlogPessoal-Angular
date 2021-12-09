@@ -15,7 +15,7 @@
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="nav-item active">
         <img
-          src="https://avatars.githubusercontent.com/u/84155234?s=400&u=29e535df3fb35a38c1d80d8e7d3ac84b0be4483b&v=4"
+          src="{{foto}}"
           alt="Imagem do User"
           width="50px"
           height="50px"
@@ -23,7 +23,7 @@
         />
       </li>
       <li class="nav-item pl-3">
-        <p class="m-0 font-weight-bold text-white fs-16">Washington</p>
+        <p class="m-0 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
       </li>
 
       <li class="nav-item pl-3 ">
@@ -34,7 +34,7 @@
     </ul>
     <ul class="navbar-nav ml-auto d-flex aling-items-center">
         <li class="nav-item pl-3">
-            <a class="m-0 font-weight-bold text-white fs-16">Sair<i class="fa fa-sign-out pl-3" aria-hidden="true"></i></a>
+            <a (click)='sair()'class="m-0 font-weight-bold text-white fs-16">Sair<i class="fa fa-sign-out pl-3" aria-hidden="true"></i></a>
           </li>
     </ul>
   </div>
