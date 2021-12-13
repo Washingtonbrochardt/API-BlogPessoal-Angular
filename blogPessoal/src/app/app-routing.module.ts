@@ -1,3 +1,4 @@
+import { TemaComponent } from './tema/tema.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginComponent } from './login/login.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:"login", component: LoginComponent},
   {path:"cadastrar", component: CadastrarComponent},
 
-  {path:"inicio", component: InicioComponent}
+  {path:"inicio", component: InicioComponent},
+  {path:"tema", component: TemaComponent}
 
 ];
 
