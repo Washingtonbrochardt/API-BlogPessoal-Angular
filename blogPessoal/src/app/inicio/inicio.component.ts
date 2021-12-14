@@ -16,6 +16,7 @@ import { Component, OnInit } from '@angular/core';
 export class InicioComponent implements OnInit {
 
   postagem:Postagem = new Postagem
+  listaPostagens: Postagem[]
 
   tema:Tema = new Tema()
   listaTemas:Tema[]
@@ -39,6 +40,7 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/login'])
     }
     this.getAllTemas()
+    this.getAllPostagens()
   }
 
   getAllTemas(){
@@ -53,16 +55,30 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  getAllPostagens(){
+    this.postagemService.getAllPostagens().subscribe((resp:Postagem[]) =>{
+      this.listaPostagens = resp
+    })
+  }
+
+  findByIdUsuario(){
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp : Usuario)=>{
+      this.usuario = resp
+    })
+  }
+
   publicar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
     this.usuario.id= this.idUsuario
-    this.postagem.usuario = this.usuario
+    this.postagem.criador = this.usuario
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=> {
       this.postagem = resp
       alert("Postagem realizada com sucesso!")
+      this.postagem= new Postagem
+      this.getAllPostagens()
     })
   }
 
